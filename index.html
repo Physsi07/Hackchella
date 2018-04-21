@@ -20,33 +20,31 @@
 </head>
 <body>
 
-
 	<div class="container">
-			<div class="wrapper-1 col-lg-12 col-xs-12">
-
-				<!-- FORM FOR THE REGISTRATION -->
-	            <form class="register-form col-lg-12 col-xs-12">
+			<div id="main-wrapper" class="wrapper-1 col-lg-12  col-xs-12">
+					<!-- FORM FOR THE REGISTRATION -->
+	            <form class="register-form">
 
 	            	<!-- FIRST NAME -->
-	            	<div class="firstname-register">
+	            	<div class="firstname-register sec-pad ">
 	            		<label for="InputFirstName">First Name</label>
 	            		<input displa type="text" class="firstname-input fn-input" id="InputFirstName" placeholder="First Name" required="true">
 	            	</div>
 
 	            	<!-- LAST NAME -->
-	            	<div class="lastname-register">
+	            	<div class="lastname-register sec-pad ">
 	            		<label for="InputLastName">Last Name</label>
 	            		<input type="text" class="lastname-input ln-input" id="InputLastName" placeholder="Last Name" required="true">
 	            	</div>
 
 	            	<!-- Email -->
-					<div class="email-register">
+					<div class="email-register sec-pad ">
 				    	<label for="InputEmail">Email</label>
 				    	<input type="email" class="email-register-input e-input" id="InputEmail" placeholder="Email" required="true">
 				  	</div>
 
 				  	<!-- PASSWORD -->
-				  	<div class="password-register">
+				  	<div class="password-register sec-pad ">
 				    	<label for="InputPassword">Password</label>
 				    	<input type="password" class="password-register-input p-input" id="InputPassword" placeholder="Password" required="true">
 				  	</div>
@@ -58,7 +56,7 @@
 				  	</div> -->
 
 				  	<!-- PREFERECE LANGUAGE -->
-				  	<div class="language-register" id="language">
+				  	<div class="language-register sec-pad " id="language">
 				    	<label>Prefered Language</label>
 				    	<select>
 				    		<option>Choose a Language...</option>	
@@ -138,9 +136,9 @@
 				  	</div>
 
 				  	<!-- ALREADY REGISTERED -->
-				  	<p class="message">
+				  	<p class="message sec-pad ">
 	                        Already Registered?
-	                        <a href="#" id="register" validate()>Login</a>
+	                        <a href="#" id="register" >Login</a>
 	                 </p>
 
 	                <!-- REGISTER BUTTON -->
@@ -148,33 +146,36 @@
 
 	            </form>
 
-	            <form class="login-form col-lg-12">
+	            <form class="login-form">
+
+	            	<div class="logo">
+               			<!-- IMAGE FOR THE LOGO -->
+                		<center><img src="avatar.png" height= "150"/></center>
+            		</div>
 
 					<!-- Email -->
-					<div class="email-login col-lg-12">
-				    	<label for="InputEmail-login col-lg-12">Phone #</label>
+					<div class="email-login sec-pad ">
+				    	<label for="InputEmail-login">Email</label>
 				    	<input type="email" class="email-login-input" id="InputEmail-login" placeholder="Email" required="true">
 				  	</div>
 					
 				  	<!-- PASSWORD -->
-				  	<div class="password-login col-lg-12">
-				    	<label for="InputPassword-login col-lg-12">Password</label>
+				  	<div class="password-login sec-pad ">
+				    	<label for="InputPassword-login">Password</label>
 				    	<input type="password" class="password-login-input" id="InputPassword-login" placeholder="Password">
 				  	</div>
 
-
-				  	<div class="checkbox col-lg-12">
+				  	<!-- CHECKBOX -->
+				  	<div class="checkbox sec-pad">
 				    	<label><input type="checkbox">Remember Me</label>
 				  	</div>
 
-				  	<button type="submit col-lg-12" class="btn btn-default">Submit</button>
+				  	<button type="submit" class="btn btn-default">Submit</button>
 				  	<a class="btn btn-default login-reg-btn">Register</a>
 
 				</form>
 
 			</div>
-		
-
 	</div>
 
 </body>

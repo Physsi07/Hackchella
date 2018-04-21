@@ -1,53 +1,133 @@
 html, body{
 	height: 100%;
 	width: 100%;
-	background: rgb(93,9,125);
-	background: linear-gradient(90deg, rgba(93,9,125,1) 0%, rgba(112,33,166,1) 39%, rgba(185,68,237,1) 100%);
-	/*margin: auto; */
+	background: rgb(93, 9, 125);
+	background: linear-gradient(90deg, rgba(93, 9, 125, 1) 0%, rgba(112, 33, 166 ,1) 39%, rgba(185, 68, 237, 1) 100%);
 }
 
+/* MY CONTAINERS */
+/***********************************************************************************/
 .container{
-	padding-right: 0;
-	padding-left: 0;
-	margin-right: auto;
-	margin-left: auto;
+    margin-top: 10%;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 500px;
+    width: 100%;
 }
 
 .wrapper-1{
-	/*display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 50px 50px;*/
-    width: 400px;
-    height: 550px;
-	/*max-width: */
+	vertical-align: middle;
+    width: 100%;
+    height: auto;
 	color: white;
 	font-size: 1.5em;
 	font-family: 'Oswald', sans-serif;
-	/*position: relative;*/
-	padding: 15px;
-	margin-top: 20%;
-	margin-left: 350px;
-	/*margin: 15% 25% 0 25%;*/
-	/*padding: 30px;*/
+	padding: 50px;
 	background-color: rgba(0, 0, 0, 0.6); 	
 }
 
-input, select{
+/**/
+input:not([type="checkbox"]), select{
 	color: black;
 	width: 100%;
-	min-width: 300px;
 	font-size: 20px;
+	padding-left: 10px;
 	margin: auto;
-}
-
-.message{
-	padding-top: 10px;
-	margin-left: 15px;
+	border-radius: 50px; /* Rounded button edges */
+	-moz-box-shadow: inset -3px -3px 10px #A138D5;
+    -webkit-box-shadow: inset -3px -3px 10px #A138D5;
+    box-shadow: inset -3px -3px 10px #A138D5;
+    font-style: italic; /* Italicize text */
+    padding: 5px 15px; /* Distance between text and border */
 }
 
 .register-btn{
+	width: 100px;
+}
+
+.btn{
+	transition: 0.3s;
+}
+
+.btn:hover{
+	box-shadow: inset 4.5em 0 0 #8138D5, inset -4.5em 0 0 #A138D5;
+	color: white;
+}
+
+.message{
+	padding-top: 20px;
+}
+/* A TAG FOR THE REGISTRATION FORM */
+/*****************************************************************/
+.message a {
+  background: #eee;
+  border-radius: 3px 0 0 3px;
+  color: black;
+  display: inline-block;
+  height: 28px;
+  line-height: 28px;
+  padding: 0 20px 0 13px;
+  position: relative;
+  margin: 0 10px 10px 0;
+  text-decoration: none;
+  -webkit-transition: color 0.2s;
+}
+
+.message a::after {
+  background-color: rgba(0, 0, 0, 0.8); 	
+  border-bottom: 14px solid transparent;
+  border-left: 10px solid #eee;
+  border-top: 14px solid transparent;
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.message a:hover {
+  background-color: #A138D5;
+  color: white;
+}
+
+.message a:hover::after {
+   border-left-color: #A138D5; 
+}
+
+.login-form .btn-default, .login-reg-btn{
+	margin-left: 15px;
+}
+
+/* AVATAR */
+/******************************************************************************************************************************/
+.logo{
+    margin-top: 5%;
+    -webkit-border-radius: 100em;
+    -moz-border-radius: 50em;
+    background-color: transparent;
+} 
+
+/* CHECKBOX */
+/******************************************************************************************************************************/
+input[type="checkbox"]{
+	position: relative;
+	/*vertical-align: middle;*/
+	bottom: 5px;
+	margin-left: 50px;
+}
+
+/* PADDING FOR THE LOGIN AND REGISTRATION */
+/******************************************************************************************************************************/
+.sec-pad{
+	padding-top: 10px;
+}
+
+#register{
 	margin-left: 10px;
 }
 
 
-/******************************************************************************************************************************/
+
+
+
+
+
