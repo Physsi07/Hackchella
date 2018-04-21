@@ -15,7 +15,7 @@
 
     <!-- The settings button to slide in the settings bar -->
     <button class="settingsButton" id="settingBtn" onclick="displayHideSettings()">
-        <img class="gearImg" src="gear.jpg" width="40" height="40" alt="submit" />
+        <img class="gearImg" src="gear.png" width="40" height="40" alt="submit" />
     </button>
 
     <!-- List of contacts -->
@@ -50,6 +50,19 @@
     </div>
 
 
+    <nav class = "context-menu">
+       <ul class = "context-items">
+           <li class = "context-item">
+               Copy Message
+           </li>
+
+           <li class = "context-item">
+               Delete Message
+           </li>
+       </ul>
+    </nav>
+
+
     <!-- The main chat interface -->
     <div class="chatContainer">
         <h4 id="otherUser"> The Other User </h4>
@@ -58,6 +71,7 @@
             <div class="messageField">
                 <div class="chatLine">
                     <div class="chatBubbleRecipient">   placeholder   </div>
+                    <p class = "delete"></p>
                 </div>
                 <div class="chatLine">
                     <div class="chatBubbleSender">   placeholder   </div>

@@ -1,13 +1,16 @@
+@import url('https://fonts.googleapis.com/css?family=Acme|Quicksand|Ubuntu+Condensed');
+
 body
 {
-    overflow-y: hidden;
+    overflow: hidden;
 }
 
 .heading
 {
     color: white;
-    font-family: ;
-    background-color: rgba(79, 19, 140, 100%);
+    padding-left: 50px;
+    font-family: "Ubuntu Condensed";
+    background-color: #A13085;;
     margin: 0;
 }
 
@@ -35,7 +38,30 @@ body
     padding-right: 10px;
     padding-top: 10px;
     overflow-y: auto;
-    background-color: white;
+    background-color: rgb(205,183,158);
+    font-family: "Quicksand";
+}
+
+::-webkit-scrollbar
+{
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background-color: #A13085;
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #b30000;
 }
 
 .chatInputContainer
@@ -60,7 +86,7 @@ body
 .chatBubbleRecipient
 {
     display: inline-block;
-    background: rgba(191,163,53,50%);
+    background: rgba(134,67,200,50%);
     padding: 7px;
     position: relative;
     left: 0px;
@@ -74,7 +100,7 @@ body
 .chatBubbleSender
 {
     display: block;
-    background: rgba(53,191,163,50%);
+    background: rgba(67,0,100,20%);
     padding: 7px;
     position: relative;
     right: 0px;
@@ -84,7 +110,7 @@ body
     border-bottom-right-radius: 0px;
     max-width: 45%;
     min-width: 5%;
-    word-wrap: break-word
+    word-wrap: break-word;
 }
 .chatSendBtn
 {
@@ -102,6 +128,19 @@ body
     border: none;
     border-left: 1px solid rgba(79, 19, 140, 100%);
 }
+
+.delete
+{
+    color: red;
+}
+
+.delete::before
+{
+    content: "\00d7";
+    display: inline-block;
+    font-size: 1rem;
+    transition: .5s;
+}
 /* ------------------------------------------------------------------------- */
 .settingsButton
 {
@@ -111,13 +150,14 @@ body
     position: absolute;
     top: 3px;
     right: 10px;
-    background-color: rgba(0, 0, 0, 15%);
+    background-color: rgba(0, 0, 0, 0);
 
 }
 
 .gearImg
 {
     transition: transform 0.6s;
+    cursor: pointer
 }
 .gearImg:hover
 {
@@ -125,7 +165,8 @@ body
 }
 .chatSideSettings
 {
-    display: none;
+    /* display: none; */
+    opacity: 0;
     height: 92.9vh;
     width: 0%;
     position:absolute;
@@ -164,7 +205,14 @@ body
 .contactItem
 {
     border-bottom: 1px solid purple;
-    padding: 10p.5
+    font-family: "Quicksand";
+    padding: 10px 10px 10px 25px;
+    cursor:pointer;
+}
+
+.contactItem:hover
+{
+    background-color: rgba(0, 0, 0, .05);
 }
 
 .userIcon
@@ -173,6 +221,11 @@ body
     width: 50px;
     border-radius: 50%;
     margin-right: 20px;
+}
+
+.newMessage
+{
+    font-weight: bolder;
 }
 /* ------------------------------------------------------------------------- */
 
@@ -205,9 +258,12 @@ body
 }
 #otherUser
 {
-    text-align: center;
+    padding: 5px 5px 10px 10px;
+    text-align: left;
+    font-family: "Acme";
     margin: 0;
-    background: rgba(79, 19, 140, 100%);
+    background: linear-gradient(to bottom, #A13085, white);
+    color: white;
 }
 
 .messageBoxInput
@@ -217,4 +273,47 @@ body
     margin-bottom: 10px;
     bottom: 0px;
     width: 100%;
+}
+
+.context-menu
+{
+   display: none;
+    position: absolute;
+    z-index: 10;
+    padding: 12px 0;
+    width: 8em;
+    background-color: #fff;
+    border: solid 1px #dfdfdf;
+   box-shadow: 1px 1px 2px #cfcfcf;
+   border-radius: 5px;
+}
+
+.context-active
+{
+   display: block;
+}
+
+.context-items
+{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.context-item
+{
+    display: block;
+   padding: 5px;
+   border-bottom: solid 1px #dfdfdf;
+   cursor: pointer;
+}
+
+.context-item:hover
+{
+   background-color: rgba(0, 0, 0, .05);
+}
+
+.context-item:last-child
+{
+   border: none;
 }
