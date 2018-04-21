@@ -1,3 +1,8 @@
+body
+{
+    overflow-y: hidden;
+}
+
 .heading
 {
     color: white;
@@ -29,7 +34,7 @@
     padding-left: 10px;
     padding-right: 10px;
     padding-top: 10px;
-    overflow: auto;
+    overflow-y: auto;
     background-color: white;
 }
 
@@ -152,14 +157,16 @@
     left: 0px;
     top: 0px;
     width: 19%;
-    height: 100%;
+    height: 92.5vh;
     border: 1px solid black;
+    overflow-y: auto;
 }
 .contactItem
 {
     border-bottom: 1px solid purple;
-    padding: 10px;
+    padding: 10p.5
 }
+
 .userIcon
 {
     height: 50px;
