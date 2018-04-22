@@ -53,7 +53,20 @@ function getProfileLanguagePreferenceBaseOnId(userId)
 
 }
 
-
+function postNewMessageToSpecificCharRoom(f,from_m,t,to_m,botw)
+{
+ let now = new Date();
+  date.format(now, 'YYYY/MM/DD HH:mm:ss'); 
+  default_db.ref('room_messages/'+f+t+"chatRoom").set(
+  {
+    from: f,
+    to : t,
+    from_msg : from_m,
+    to_msg : to_m,
+        botwork : botw,
+        date : now
+  });
+}
 
 
 //lets write user data to an recognized and authenticated user 
@@ -115,7 +128,7 @@ function translateLanguage(language, text)
                 });
                };//close responder handler
 
-               console.log(host+path+params);
+              
                let Translate = function () {
                let request_params = {
                method : 'GET',
@@ -206,6 +219,8 @@ console.log(dom.window.document.querySelector("#InputPassword"));
 
 //start our background service to work with the bot
 getFromToEndMessageBackgroundService();
+
+postNewMessageToSpecificCharRoom("joserny","hey what's going on!", "chivo","null",0);
 
 
 
