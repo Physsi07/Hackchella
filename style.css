@@ -3,6 +3,7 @@ html, body{
 	width: 100%;
 	background: rgb(93, 9, 125);
 	background: linear-gradient(90deg, rgba(93, 9, 125, 1) 0%, rgba(112, 33, 166 ,1) 39%, rgba(185, 68, 237, 1) 100%);
+  overflow-y: hidden;
 }
 
 /* LOGO FOR THE WEBSITE */
@@ -24,6 +25,7 @@ html, body{
     max-width: 500px;
     width: 100%;
     z-index: 3;
+    background: transparent;
 }
 
 .wrapper-1{
@@ -34,7 +36,8 @@ html, body{
 	font-size: 1.5em;
 	font-family: 'Oswald', sans-serif;
 	padding: 50px;
-	background-color: rgba(0, 0, 0, 0.6); 	
+	background-color: rgba(0, 0, 0, 0.6);
+  z-index: 4;
 }
 
 /**/
@@ -146,7 +149,7 @@ input[type="checkbox"]{
   width: 100%;
   top: 0;
   left: 0;
-  z-index: -1;
+  z-index: 1;
 }
 
 .cubes li
