@@ -83,29 +83,12 @@ function updateWorksOnAttr(messageRef) {
   });
 }
 
-
-
-
-//lets start the service real time to have our microsfBot work lol
-function getFromToEndMessageBackgroundService()
+function translateLanguage(language, text)
 {
-    default_db.ref('chat').child('room-messages').on('child_added', function(postSnapshot) {
-    var messageReference = postSnapshot.ref;
-    var postId = postSnapshot.key;
-   
-    //console.log(postSnapshot.val());
-   // console.log(postSnapshot.val());
-    postSnapshot.forEach(function(childSnapshot) {
-        var item = childSnapshot.val();
-        item.key = childSnapshot.key;
-      
-  
-         if(item.botwork===0)
-         	{
-         		//we need our bot to do its work
-         		let target = 'fr-fr';
-                let params = '?to=' + target + '&text=' + encodeURI("hello world");
-         		let response_handler = function (response) {
+
+
+                let params = '?to=' + language + '&text=' + encodeURI(text);
+            let response_handler = function (response) {
                 let body = '';
                 response.on ('data', function (d) {
                 body += d;
@@ -115,7 +98,7 @@ function getFromToEndMessageBackgroundService()
                 //function is giving me the value translated
                  parseString(body, function (err, result) {
                   if(!err){
-                 	var res = JSON.stringify(result);
+                  var res = JSON.stringify(result);
                  console.dir(res);
                }
                 });
@@ -151,10 +134,42 @@ function getFromToEndMessageBackgroundService()
            
              //lets translate
               Translate ();
+}
+
+
+//lets start the service real time to have our microsfBot work lol
+function getFromToEndMessageBackgroundService()
+{
+
+    default_db.ref('chat').child('room_messages').on('child_added', function(postSnapshot) {
+    var messageReference = postSnapshot.ref;
+    var postId = postSnapshot.key;
+    var item = postSnapshot.val();
+    //console.log(postSnapshot.val().date);
+   // console.log(postSnapshot.val());
+    /*postSnapshot.forEach(function(childSnapshot) {
+        var item = childSnapshot.val();
+        console.log(item.from)*/
+      
+  
+         if(item.botwork===0)
+         	{
+         		//we need our bot to do its work
+            let spanish = 'es';
+            let english = 'en';
+            let francais = 'fr';
+            let portugues = 'pt';
+            let rusia = 'ru';
+            let german  = 'de';
+
+         		translateLanguage(spanish,item.from_msg);
+            translateLanguage(english,item.from_msg);
+            translateLanguage(francais,item.from_msg);
+            translateLanguage(portugues,item.from_msg);
 
          	}//end of if check
 
-         	 });//end of foreach
+         	//});//end of foreach
 
         //updateWorksOnAttr(messageReference);
       // [START_EXCLUDE]
