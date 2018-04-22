@@ -1,0 +1,248 @@
+html, body{
+	height: 100%;
+	width: 100%;
+	background: rgb(93, 9, 125);
+	background: linear-gradient(90deg, rgba(93, 9, 125, 1) 0%, rgba(112, 33, 166 ,1) 39%, rgba(185, 68, 237, 1) 100%);
+}
+
+/* MY CONTAINERS */
+/***********************************************************************************/
+.container{
+    margin-top: 10%;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 500px;
+    width: 100%;
+    z-index: 2;
+}
+
+.wrapper-1{
+	vertical-align: middle;
+    width: 100%;
+    height: auto;
+	color: white;
+	font-size: 1.5em;
+	font-family: 'Oswald', sans-serif;
+	padding: 50px;
+	background-color: rgba(0, 0, 0, 0.6); 	
+}
+
+/**/
+input:not([type="checkbox"]), select{
+	color: black;
+	width: 100%;
+	font-size: 20px;
+	padding-left: 10px;
+	margin: auto;
+	border-radius: 50px; /* Rounded button edges */
+	-moz-box-shadow: inset -3px -3px 10px #A138D5;
+    -webkit-box-shadow: inset -3px -3px 10px #A138D5;
+    box-shadow: inset -3px -3px 10px #A138D5;
+    font-style: italic; /* Italicize text */
+    padding: 5px 15px; /* Distance between text and border */
+}
+
+.register-btn{
+	width: 100px;
+}
+
+.btn{
+	transition: 0.3s;
+}
+
+.btn:hover{
+	box-shadow: inset 4.5em 0 0 #8138D5, inset -4.5em 0 0 #A138D5;
+	color: white;
+}
+
+.message{
+	padding-top: 20px;
+}
+/* A TAG FOR THE REGISTRATION FORM */
+/*****************************************************************/
+.message a {
+  background: #eee;
+  border-radius: 3px 0 0 3px;
+  color: black;
+  display: inline-block;
+  height: 28px;
+  line-height: 28px;
+  padding: 0 20px 0 13px;
+  position: relative;
+  margin: 0 10px 10px 0;
+  text-decoration: none;
+  -webkit-transition: color 0.2s;
+}
+
+.message a::after {
+  background-color: rgba(0, 0, 0, 0.8); 	
+  border-bottom: 14px solid transparent;
+  border-left: 10px solid #eee;
+  border-top: 14px solid transparent;
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.message a:hover {
+  background-color: #A138D5;
+  color: white;
+}
+
+.message a:hover::after {
+   border-left-color: #A138D5; 
+}
+
+.login-form .btn-default, .login-reg-btn{
+	margin-left: 15px;
+}
+
+/* AVATAR */
+/******************************************************************************************************************************/
+.logo{
+    margin-top: 5%;
+    -webkit-border-radius: 100em;
+    -moz-border-radius: 50em;
+    background-color: transparent;
+} 
+
+/* CHECKBOX */
+/******************************************************************************************************************************/
+input[type="checkbox"]{
+	position: relative;
+	/*vertical-align: middle;*/
+	bottom: 5px;
+	margin-left: 50px;
+}
+
+/* PADDING FOR THE LOGIN AND REGISTRATION */
+/******************************************************************************************************************************/
+.sec-pad{
+	padding-top: 10px;
+}
+
+#register{
+	margin-left: 10px;
+}
+
+/*BACKGROUND CUBES*/
+/******************************************************************************************************************************/
+.cubes 
+{
+  list-style-type: none;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.cubes li
+{
+  list-style: none;
+  display: block;
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  bottom: -10%;
+  background-color: rgba(255,255,255, .15);
+  border: 1px solid black;
+
+  -webkit-animation: square 25s infinite running, squish 7s ease-in-out infinite running;
+  animation: square 25s infinite running, squish 7s ease-in-out infinite running;
+}
+
+.cubes li:nth-child(1)
+{
+    left: 25%;
+}
+
+.cubes li:nth-child(2)
+{
+  left: 55%;
+  height: 100px;
+  width: 100px;
+
+  -webkit-animation-delay: 5s;
+  animation-delay: 5s;
+}
+
+.cubes li:nth-child(3)
+{
+  left: 25%;
+  height: 60px;
+  width: 60px;
+
+  -webkit-animation-delay: 10s;
+  animation-delay: 10s;
+
+  -webkit-animation-duration: 17s;
+  animation-duration: 17s;
+}
+
+.cubes li:nth-child(4)
+{
+  left: 75%;
+}
+
+.cubes li:nth-child(5)
+{
+  left: 85%;
+  height: 60px;
+  width: 60px;
+
+  animation-duration: 20s;
+}
+
+.cubes li:nth-child(6)
+{
+  left: 65%;
+
+  animation-duration: 15s;
+}
+
+.cubes li:nth-child(7)
+{
+  left: 35%;
+
+  animation-delay: 5s;
+}
+
+.cubes li:nth-child(8)
+{
+  left: 5%;
+  height: 150px;
+  width: 150px;
+  bottom: -15%;
+
+  animation-delay: 20s;
+  animation-duration: 20s;
+}
+
+@-webkit-keyframes square
+{
+  0% {top: 105; transform: rotate(600deg);}
+  100% {top: 0%;}
+}
+
+@keyframes square
+{
+  0% {top: 105%; transform: rotate(600deg);}
+  100% {top: 0%; opacity: .1;}
+}
+
+@keyframes squish
+{
+  0% {transform: scale(1.2) rotate(90deg); border-radius: 0px;}
+  40% {transform: scale(.5) rotate(0deg); border-radius: 100px}
+  80% {transform: scale(2) rotate(360deg); border-radius: 50px;}
+  100% {transform: scale(1) rotate(0deg); border-radius: 20px}
+}
+
+
+
+
+
+

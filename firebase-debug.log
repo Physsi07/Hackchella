@@ -1,0 +1,40 @@
+[debug] [2018-04-22T01:24:26.799Z] ----------------------------------------------------------------------
+[debug] [2018-04-22T01:24:26.801Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\luism\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve --only functions,hosting
+[debug] [2018-04-22T01:24:26.802Z] CLI Version:   3.18.4
+[debug] [2018-04-22T01:24:26.802Z] Platform:      win32
+[debug] [2018-04-22T01:24:26.802Z] Node Version:  v8.11.1
+[debug] [2018-04-22T01:24:26.802Z] Time:          Sat Apr 21 2018 21:24:26 GMT-0400 (Eastern Daylight Time)
+[debug] [2018-04-22T01:24:26.802Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-04-22T01:24:26.815Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-04-22T01:24:26.816Z] > authorizing via signed-in user
+[debug] [2018-04-22T01:24:26.819Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/chatslate-3d35b  
+  
+ Sat Apr 21 2018 21:24:26 GMT-0400 (Eastern Daylight Time)
+[debug] [2018-04-22T01:24:27.303Z] <<< HTTP RESPONSE 200
+[debug] [2018-04-22T01:24:27.304Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/chatslate-3d35b/tokens  
+  
+ Sat Apr 21 2018 21:24:27 GMT-0400 (Eastern Daylight Time)
+[debug] [2018-04-22T01:24:27.990Z] <<< HTTP RESPONSE 200
+[debug] [2018-04-22T01:24:27.990Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/chatslate-3d35b  
+  
+ Sat Apr 21 2018 21:24:27 GMT-0400 (Eastern Daylight Time)
+[debug] [2018-04-22T01:24:28.289Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from 'C:\Users\luism\OneDrive\Documents\GitHub\Hackchella'...
+[info] 
+[info] i  functions: Preparing to emulate functions.
+[debug] [2018-04-22T01:24:38.910Z] Fetching environment
+[debug] [2018-04-22T01:24:38.916Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/616619846824:getServerAppConfig  
+  
+ Sat Apr 21 2018 21:24:38 GMT-0400 (Eastern Daylight Time)
+[debug] [2018-04-22T01:24:38.916Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/616619846824/clients/_:getWebAppConfig  
+  
+ Sat Apr 21 2018 21:24:38 GMT-0400 (Eastern Daylight Time)
+[debug] [2018-04-22T01:24:39.278Z] <<< HTTP RESPONSE 200
+[debug] [2018-04-22T01:24:39.652Z] <<< HTTP RESPONSE 200
+[debug] [2018-04-22T01:24:39.652Z] Starting @google-cloud/functions-emulator
+[info] i  hosting: Serving hosting files from: public
+[info] +  hosting: Local server: http://localhost:5000
+
+[debug] [2018-04-22T01:24:47.152Z] Parsing function triggers
