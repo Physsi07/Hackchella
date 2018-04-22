@@ -13,7 +13,8 @@ var cheerio  = require('cheerio'),
  		throw err;
  	}else{
  		$ =  cheerio.load(html.toString());
- 		 
+ 		  var name = $("input[name=firstname]");
+         console.log(name);  
           
 
 

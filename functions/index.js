@@ -1,7 +1,7 @@
-
 'use strict';
 
 //author luis manon
+
 //import the firabse lib and assign it to the object firebase to use it
 var firebase  =  require("firebase");
 var admin =  require("firebase-admin");
@@ -61,7 +61,7 @@ function writeUserData(firstN,lastN,email,password,lang)
 {
 	let now = new Date();
 	date.format(now, 'YYYY/MM/DD HH:mm:ss'); 
-	default_db.ref('members/').set(
+	default_db.ref('members/'+firstN+lastN).set(
 	{
 		firstName: firstN,
 		lastName : lastN,
@@ -114,16 +114,21 @@ function getFromToEndMessageBackgroundService()
                 
                 //function is giving me the value translated
                  parseString(body, function (err, result) {
+                  if(!err){
                  	var res = JSON.stringify(result);
                  console.dir(res);
+               }
                 });
+
+
+
+
 
                 });
                 response.on ('error', function (e) {
                   if(e){
-                  console.log ('Error: ' + e.message);
+                console.log ('Error: ' + e.message);
                   }
-                
                 });
                };//close responder handler
 
@@ -162,11 +167,38 @@ function getFromToEndMessageBackgroundService()
 }
 
 
+ //cheerion js library
+/*var request = require('request');
+var cheerio = require('cheerio');
 
+request('https://chatslate-3d35b.firebaseapp.com', function (error, response, html) {
+  if (!error && response.statusCode === 200) {
+    console.log(html);
+  }
+});*/
+const jsdom = require("jsdom");
+
+const { JSDOM } = jsdom;
+const dom = new JSDOM(``, {
+  url: "https://chatslate-3d35b.firebaseapp.com",
+  referrer: "https://chatslate-3d35b.firebaseapp.com",
+  contentType: "text/html",
+  userAgent: "Mellblomenator/9000",
+  includeNodeLocations: true
+});
+
+console.log(dom.window.document.querySelector("#InputPassword"));
 
 //start our background service to work with the bot
 getFromToEndMessageBackgroundService();
 
+
+
+//writeUserData("starlyn","urena","starlinu33@gmail.com","beastmode","english");
+//writeUserData("luis","manon","luisman1989@gmail.com","angel","spanish");
+
+
 //writeUserData("luisman1989@gmail.com","nioCoders@gmail.com"," This is just a simple text message to check db settings!");
 //var db =  admin.database();
 //var db_ref =  db.ref("https://chatslate-3d35b.firebaseio.com/messages");
+

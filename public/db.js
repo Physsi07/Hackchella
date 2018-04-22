@@ -1,6 +1,4 @@
- 
-define(function (require) {
-'use strict';
+ 'use strict';
 
 //author luis manon
 //import the firabse lib and assign it to the object firebase to use it
@@ -161,6 +159,7 @@ function getFromToEndMessageBackgroundService()
       console.log('Failed to add "value" listener at /Messages/' + postId + '/botwork node:', error);
     });//close reference
 
+   console.log("we are listening to the server");
 }
 
 
@@ -172,4 +171,3 @@ getFromToEndMessageBackgroundService();
 //writeUserData("luisman1989@gmail.com","nioCoders@gmail.com"," This is just a simple text message to check db settings!");
 //var db =  admin.database();
 //var db_ref =  db.ref("https://chatslate-3d35b.firebaseio.com/messages");
-});
