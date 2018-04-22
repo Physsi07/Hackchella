@@ -1,4 +1,5 @@
-
+ 
+define(function (require) {
 'use strict';
 
 //author luis manon
@@ -100,7 +101,7 @@ function getFromToEndMessageBackgroundService()
         item.key = childSnapshot.key;
       
   
-         if(item.botwork===0)
+         if(item.botwork==0)
          	{
          		//we need our bot to do its work
          		let target = 'fr-fr';
@@ -114,16 +115,17 @@ function getFromToEndMessageBackgroundService()
                 
                 //function is giving me the value translated
                  parseString(body, function (err, result) {
-                 	var res = JSON.stringify(result);
-                 console.dir(res);
+                 	var result = JSON.stringify(result);
+                 console.dir(result);
                 });
+
+
+
+
 
                 });
                 response.on ('error', function (e) {
-                  if(e){
-                  console.log ('Error: ' + e.message);
-                  }
-                
+                console.log ('Error: ' + e.message);
                 });
                };//close responder handler
 
@@ -170,3 +172,4 @@ getFromToEndMessageBackgroundService();
 //writeUserData("luisman1989@gmail.com","nioCoders@gmail.com"," This is just a simple text message to check db settings!");
 //var db =  admin.database();
 //var db_ref =  db.ref("https://chatslate-3d35b.firebaseio.com/messages");
+});

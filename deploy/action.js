@@ -14,6 +14,19 @@ $(document).ready(function(){
 	    	$(".login-form").hide('slow');
 	    	$(".register-form").show('slow');
 	   	})
+
+
+	   	$(".register-btn").click(function(e)
+	   	{
+	   		e.preventDefault();
+	   		var name =  $("input[name='firstname']").val();
+	   		var last_name = $("input[name='lastname']").val();
+	   		var email =  $("input[name='email']").val();
+	   		var password = $("input[name='password']").val();
+	   		var language = $("#language").val();
+
+	   		console.log(name+ " "+ last_name+" "+email+" "+password+" "+language);
+	   	});
 });
 
 
