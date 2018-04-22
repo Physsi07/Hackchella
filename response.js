@@ -15,7 +15,7 @@ $(document).ready(function()
 
     document.addEventListener("contextmenu", function(e)
    {
-       e.preventDefault();
+       // e.preventDefault();
 
        var isClickable = isElement(e, "chatBubbleSender");
 
