@@ -8,9 +8,9 @@ body
 }
 
 .heading
-{
-    color: white;
-    padding-left: 50px;
+{   
+    height: 60px;
+    padding-left: 10px;
     font-family: "Quicksand";
     background:linear-gradient(90deg, rgba(93, 9, 125, 1) 0%, rgba(112, 33, 166 ,1) 39%, rgba(185, 68, 237, 1) 100%);
     margin: 0;
@@ -304,6 +304,8 @@ h1
     margin: 0;
     background: linear-gradient(to bottom, #A13085, rgba(0, 0, 0, .02));
     color: white;
+    border: 1px solid purple;
+
 }
 
 .messageBoxInput

@@ -5,20 +5,31 @@ html, body{
 	background: linear-gradient(90deg, rgba(93, 9, 125, 1) 0%, rgba(112, 33, 166 ,1) 39%, rgba(185, 68, 237, 1) 100%);
 }
 
+/* LOGO FOR THE WEBSITE */
+/***********************************************************************************/
+.logo{
+  width: 300px;
+  margin-top: 10%;
+  margin-right: auto;
+  margin-left: auto;
+  top: 100px;
+}
+
 /* MY CONTAINERS */
 /***********************************************************************************/
 .container{
-    margin-top: 10%;
+    margin-top: auto;
     margin-right: auto;
     margin-left: auto;
     max-width: 500px;
     width: 100%;
+    z-index: 3;
 }
 
 .wrapper-1{
 	vertical-align: middle;
-    width: 100%;
-    height: auto;
+   width: 100%;
+  height: auto;
 	color: white;
 	font-size: 1.5em;
 	font-family: 'Oswald', sans-serif;
@@ -135,7 +146,7 @@ input[type="checkbox"]{
   width: 100%;
   top: 0;
   left: 0;
-  z-index: 1;
+  z-index: -1;
 }
 
 .cubes li
