@@ -22,3 +22,7 @@ $(document).ready(function(){
 // var secondName = document.getElementById("InputLastName").value;
 // var email      = document.getElementById("InputEmail").value;
 // var language   = document.getElementById("languuage").value;
+<<<<<<< HEAD
+=======
+
+>>>>>>> fcccd11ab1f1dc7e1d0efffdc55b4094e35509a0

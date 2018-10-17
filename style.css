@@ -30,7 +30,11 @@ html, body{
 
 .wrapper-1{
 	vertical-align: middle;
+<<<<<<< HEAD
   width: 100%;
+=======
+   width: 100%;
+>>>>>>> fcccd11ab1f1dc7e1d0efffdc55b4094e35509a0
   height: auto;
 	color: white;
 	font-size: 1.5em;
@@ -49,10 +53,17 @@ input:not([type="checkbox"]), select{
 	margin: auto;
 	border-radius: 50px; /* Rounded button edges */
 	-moz-box-shadow: inset -3px -3px 10px #A138D5;
+<<<<<<< HEAD
   -webkit-box-shadow: inset -3px -3px 10px #A138D5;
   box-shadow: inset -3px -3px 10px #A138D5;
   font-style: italic; /* Italicize text */
   padding: 5px 15px; /* Distance between text and border */
+=======
+    -webkit-box-shadow: inset -3px -3px 10px #A138D5;
+    box-shadow: inset -3px -3px 10px #A138D5;
+    font-style: italic; /* Italicize text */
+    padding: 5px 15px; /* Distance between text and border */
+>>>>>>> fcccd11ab1f1dc7e1d0efffdc55b4094e35509a0
 }
 
 .register-btn{
@@ -88,7 +99,11 @@ input:not([type="checkbox"]), select{
 }
 
 .message a::after {
+<<<<<<< HEAD
   background-color: rgba(0, 0, 0, 0.8);
+=======
+  background-color: rgba(0, 0, 0, 0.8); 	
+>>>>>>> fcccd11ab1f1dc7e1d0efffdc55b4094e35509a0
   border-bottom: 14px solid transparent;
   border-left: 10px solid #eee;
   border-top: 14px solid transparent;
@@ -104,7 +119,11 @@ input:not([type="checkbox"]), select{
 }
 
 .message a:hover::after {
+<<<<<<< HEAD
    border-left-color: #A138D5;
+=======
+   border-left-color: #A138D5; 
+>>>>>>> fcccd11ab1f1dc7e1d0efffdc55b4094e35509a0
 }
 
 .login-form .btn-default, .login-reg-btn{
@@ -118,7 +137,11 @@ input:not([type="checkbox"]), select{
     -webkit-border-radius: 100em;
     -moz-border-radius: 50em;
     background-color: transparent;
+<<<<<<< HEAD
 }
+=======
+} 
+>>>>>>> fcccd11ab1f1dc7e1d0efffdc55b4094e35509a0
 
 /* CHECKBOX */
 /******************************************************************************************************************************/
@@ -141,7 +164,11 @@ input[type="checkbox"]{
 
 /*BACKGROUND CUBES*/
 /******************************************************************************************************************************/
+<<<<<<< HEAD
 .cubes
+=======
+.cubes 
+>>>>>>> fcccd11ab1f1dc7e1d0efffdc55b4094e35509a0
 {
   list-style-type: none;
   position: absolute;
@@ -253,3 +280,12 @@ input[type="checkbox"]{
   80% {transform: scale(2) rotate(360deg); border-radius: 50px;}
   100% {transform: scale(1) rotate(0deg); border-radius: 20px}
 }
+<<<<<<< HEAD
+=======
+
+
+
+
+
+
+>>>>>>> fcccd11ab1f1dc7e1d0efffdc55b4094e35509a0
